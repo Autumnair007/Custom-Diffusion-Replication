@@ -1,0 +1,12 @@
+lightning:
+  callbacks:
+    image_logger:
+      target: train.ImageLogger
+      params:
+        batch_frequency: 1000
+        max_images: 8
+        increase_log_steps: false
+  trainer:
+    max_steps: 550
+    accelerator: ddp
+    gpus: 1
